@@ -1,0 +1,98 @@
+
+
+.query-builder-container {
+    background: #2b2b2b !important;
+    border: 1px solid #444 !important;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0;
+    color: #f0f0f0 !important;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+.query-builder .rules-group-header{
+    display: flex;
+    justify-content: space-between;
+}
+.query-builder .pull-right{
+    order: 99;
+    align-items: center;
+    display: flex;
+}
+
+
+.query-builder .rules-group-container {
+    background: #3a3a3a !important;
+    border: 1px solid #555 !important;
+}
+
+.query-builder .rule-container {
+    background: #333 !important;
+    border: 1px solid #555 !important;
+    display: flex;
+    align-items: center;
+}
+
+.query-builder .rule-container .rule-header{
+    order: 99;
+    margin-left: auto;
+}
+
+.query-builder .btn {
+    background: #417690 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 8px 14px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    margin-right: 5px !important;
+}
+
+.query-builder .btn:hover {
+    background: #609ab6 !important;
+}
+
+.query-builder .btn-danger {
+    background: #ba2121 !important;
+    margin: 10px;
+}
+
+.query-builder .btn-danger:hover {
+    background: #a41515 !important;
+}
+
+.query-builder .group-conditions {
+    display: flex;
+    margin: 10px 10px 10px 0;
+}
+
+.query-builder .group-conditions .btn {
+    background: #2b2b2b !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #666 !important;
+    font-size: 12px !important;
+}
+
+.query-builder .group-conditions .btn.active {
+    background: #417690 !important;
+    color: #fff !important;
+    border-color: #417690 !important;
+}
+
+.query-builder .group-conditions .btn.btn-xs {
+    max-width: 50px !important;
+    min-width: 30px !important;
+    padding: 2px 10px !important;
+    width: 30px;
+}
+
+.query-builder select,
+.query-builder input[type="text"],
+.query-builder input[type="number"],
+.query-builder input[type="date"],
+.query-builder input[type="time"],
+.query-builder textarea {
+    background: #222 !important;
+    border: 1px solid #666 !important;
+    color: #f0f0f0 !important;
+}
