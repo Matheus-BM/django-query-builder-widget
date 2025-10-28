@@ -2,6 +2,9 @@
 
 A Django admin widget that integrates jQuery QueryBuilder for building complex database queries through an intuitive visual interface.
 
+## Preview
+<img width="1224" height="542" alt="image" src="https://github.com/user-attachments/assets/e14befe9-fd88-4a05-a0ea-a440c3c72469" />
+
 ## Features
 
 - Visual query building interface in Django admin
