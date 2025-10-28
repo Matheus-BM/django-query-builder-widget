@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-query-builder-widget"
-version = "0.0.3"
+version = "0.0.4"
 description = "A Django admin widget for building complex queries using jQuery QueryBuilder"
 readme = "README.md"
 authors = [
