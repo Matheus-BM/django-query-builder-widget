@@ -1,12 +1,15 @@
 from typing import Dict, Any
 from decimal import Decimal
-from django.db.models import Q, Model
+from django.db.models import Q, Model, ForeignKey
 
 
 def get_field_value(object: Model, field: str) -> Any:
     field_obj = object._meta.get_field(field)
+
     if field_obj.many_to_many:
         return list(getattr(object, field).values_list('id', flat=True))
+    elif field_obj.is_relation and isinstance(field_obj, ForeignKey):
+        return str(getattr(getattr(object, field), 'id'))
 
     return getattr(object, field, None)
 
@@ -21,8 +24,12 @@ def compare_values(value: Any, operator: str, rule_value: Any) -> bool:
         value = type(rule_value)(value)
 
     if operator == 'equal':
+        if isinstance(value, list):
+            return rule_value in value
         return value == rule_value
     elif operator == 'not_equal':
+        if isinstance(value, list):
+            return rule_value not in value
         return value != rule_value
     elif operator == 'contains':
         return str(rule_value).lower() in str(value).lower()
