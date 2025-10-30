@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="django-query-builder-widget",
-    version="0.0.4",
+    version="0.0.6",
     author="MatheusBM",
     author_email="contato@matheusbm.com",
     description="A Django admin widget for building complex queries using jQuery QueryBuilder",
