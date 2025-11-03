@@ -9,7 +9,10 @@ def get_field_value(object: Model, field: str) -> Any:
     if field_obj.many_to_many:
         return [str(id) for id in getattr(object, field).values_list('id', flat=True)]
     elif field_obj.is_relation and isinstance(field_obj, ForeignKey):
-        return str(getattr(getattr(object, field), 'id'))
+        related_object = getattr(object, field)
+        if related_object is None:
+            return None
+        return str(getattr(related_object, 'id'))
 
     return getattr(object, field, None)
 
